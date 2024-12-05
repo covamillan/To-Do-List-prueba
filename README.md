@@ -41,3 +41,6 @@ Follow these simple steps to set up and run the project locally:
    ```bash
    npm run dev
    ```
+
+If you prefer, you can see the project in Vercel.
+https://to-do-list-prueba.vercel.app/
