@@ -25,20 +25,19 @@ Follow these simple steps to set up and run the project locally:
 1. **Clone the repository**:  
    Open a terminal and run:
 
-   ````bash
-   ```git clone <repository_url>
-   ```cd todo
-
-   ````
+   ```bash
+   git clone <repository_url>
+   cd todo
+   ```
 
 2. Install dependencies:
 
-   ```npm install
-
+   ```bash
+   npm install
    ```
 
 3. Start the development server:
 
-   ```npm run dev
-
+   ```bash
+   npm run dev
    ```
