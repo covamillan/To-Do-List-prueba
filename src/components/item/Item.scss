@@ -1,0 +1,87 @@
+@use "../../styles/palette.scss" as *;
+
+.item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  background-color: $light;
+  height: 4rem;
+  color: $dark;
+  box-shadow: 0 0 10px $ternary;
+  font-family: "vy Sans";
+  border-radius: 5px;
+
+  span {
+    min-width: 30%;
+    border-left: 3px solid $ternary;
+    padding-left: 0.5rem;
+    overflow: hidden;
+  }
+
+  .checkbox {
+    position: relative;
+    transition: all 0.3s ease;
+    background: $primary;
+    box-shadow: 0 0 10px $ternary;
+    font-size: 0.7rem;
+    color: white;
+    aspect-ratio: 1/1;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1rem;
+      width: 1rem;
+      background: linear-gradient(to right, transparent, white);
+      left: -1.5rem;
+    }
+  }
+
+  button:not(.checkbox):not(.expander) {
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    aspect-ratio: 1/1;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:not(.checkbox):hover {
+    color: $ternary;
+  }
+
+  .checkbox:hover {
+    background-color: $dark;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  .modifiers {
+    overflow: hidden;
+    transition: width 0.3s ease;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    color: black !important;
+  }
+
+  .expander {
+    rotate: 90deg;
+    color: $dark;
+    font-size: 2rem;
+    height: 2rem;
+    padding-bottom: 1rem;
+  }
+}

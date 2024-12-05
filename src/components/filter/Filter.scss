@@ -1,0 +1,29 @@
+@use "../../styles/palette.scss" as *;
+
+.filter {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  select {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-bottom: 1px solid $primary;
+    color: gray;
+    padding: 0.5rem 0;
+    box-shadow: 0 3px 3px -3px $ternary;
+
+    option {
+      color: $primary;
+    }
+  }
+
+  select:focus-visible {
+    outline: none;
+  }
+
+  @media (width < 1000px) {
+    justify-content: center;
+  }
+}

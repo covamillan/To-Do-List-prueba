@@ -1,0 +1,154 @@
+@use "../../styles/palette.scss" as *;
+
+.list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+
+  @media (width < 1000px) {
+    flex-direction: column;
+
+    .about {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+
+      form {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .separator-mobile {
+      width: 100%;
+      height: 0.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .items ul {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  p {
+    margin: 0.5rem 0;
+    line-height: 1.2;
+
+    a {
+      all: unset;
+      transition: all 0.3s;
+      cursor: pointer;
+      font-weight: 600;
+      color: $primary;
+    }
+
+    a:hover {
+      color: $ternary;
+    }
+  }
+}
+
+.separator,
+.separator-mobile {
+  width: 5rem;
+  background: url("../../../public/bg.jpg");
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4rem 4rem 2rem;
+  background: $light;
+  width: 30%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerDesdeAbajo 1s forwards;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  input {
+    all: unset;
+    cursor: text;
+    border: none;
+    border-bottom: 1px solid $primary;
+    padding: 0.5rem 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 3px 3px -3px $ternary;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  form {
+    display: flex;
+    margin: 2rem 0;
+    gap: 1rem;
+
+    button {
+      transition: all 0.3s ease;
+      background: $dark;
+      color: $light;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+
+    button:hover {
+      color: $ternary;
+      box-shadow: 0 0 10px $ternary;
+    }
+  }
+}
+
+.items {
+  flex-grow: 1;
+  background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $light;
+
+  ul {
+    all: unset;
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
+
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+
+    li {
+      margin: 2rem;
+    }
+  }
+
+  p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecerDesdeAbajo 1s forwards;
+    animation-delay: 1s;
+  }
+  .completed {
+    opacity: 0.3;
+    text-decoration: line-through;
+    border-left: 3px solid lime;
+
+    .checkbox {
+      background-color: $dark;
+    }
+  }
+}
+
+@keyframes aparecerDesdeAbajo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

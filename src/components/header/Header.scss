@@ -1,0 +1,41 @@
+@use "../../styles/palette.scss" as *;
+
+.header {
+  display: inline;
+  height: auto;
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-bottom: 2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: $primary;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  @media (width < 1000px) {
+    transition: all 0.5s;
+    flex-direction: column;
+
+    h1 {
+      transition: all 0.5s;
+      text-align: center;
+      font-size: 3rem;
+      color: $primary;
+    }
+
+    h2 {
+      transition: all 0.5s;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+}

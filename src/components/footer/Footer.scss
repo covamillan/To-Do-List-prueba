@@ -1,0 +1,30 @@
+@use "../../styles/palette.scss" as *;
+
+.footer {
+  display: block;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 0.8rem;
+  height: 2rem;
+  color: $light;
+  background-color: $dark;
+  border-right: 2rem solid $secondary;
+
+  img {
+    filter: invert(100%);
+    height: 1rem;
+    margin-left: 1rem;
+    transition: 0.5s all;
+  }
+
+  img:hover {
+    filter: invert(70%);
+  }
+
+  address {
+    font-style: normal;
+  }
+}
